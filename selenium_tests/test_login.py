@@ -1,4 +1,3 @@
-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -21,8 +20,8 @@ try:
     for item in driver.find_elements(By.TAG_NAME, "button"):
         print(item.text)
 
-    input("Check the Chrome screen. Press Enter to close.")
-
+    driver.quit()
+    
 finally:
     driver.quit()
 
