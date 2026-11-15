@@ -1,0 +1,164 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.weather-page {
+  min-height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1493246507139-91e8fad9978e");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.overlay {
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 35px 20px;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+}
+
+.overlay > h1 {
+  font-size: clamp(32px, 5vw, 65px);
+  font-weight: bold;
+  letter-spacing: 4px;
+  text-shadow: 0 4px 12px black;
+  margin-bottom: 15px;
+}
+
+.date {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.search-box input {
+  width: 260px;
+  padding: 12px;
+  border: 2px solid #333;
+  border-radius: 9px;
+  font-size: 15px;
+}
+
+.search-box button {
+  padding: 12px 22px;
+  background: #003cff;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.search-box button:hover {
+  background: #0028aa;
+}
+
+.search-box button:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.error {
+  color: #ffdddd;
+  font-weight: bold;
+  margin: 20px;
+}
+
+.weather-card {
+  max-width: 450px;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+}
+
+.weather-card h1 {
+  font-size: 60px;
+  margin: 5px;
+}
+
+.weather-card img {
+  width: 90px;
+}
+
+.description {
+  text-transform: capitalize;
+  font-size: 19px;
+  margin-bottom: 20px;
+}
+
+.details {
+  line-height: 2;
+  font-size: 16px;
+}
+
+.forecast-title {
+  margin: 35px 0 25px;
+  text-shadow: 2px 2px 8px black;
+}
+
+.forecast-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.forecast-card {
+  width: 165px;
+  padding: 20px;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+}
+
+.forecast-card img {
+  width: 80px;
+}
+
+.forecast-card h2 {
+  margin: 8px;
+}
+
+.forecast-card p {
+  text-transform: capitalize;
+}
+
+@media (max-width: 600px) {
+  .weather-page {
+    padding: 8px;
+  }
+
+  .overlay {
+    padding: 30px 10px;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+
+  .forecast-card {
+    width: 140px;
+  }
+}
+
