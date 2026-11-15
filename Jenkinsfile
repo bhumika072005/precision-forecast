@@ -1,3 +1,4 @@
+
 pipeline {
     agent any
 
@@ -11,13 +12,13 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 bat 'npm ci'
-                bat 'python -m pip install selenium'
+                bat '"C:/Users/bhumi/AppData/Local/Programs/Python/Python313/python.exe" -m pip install selenium'
             }
         }
 
         stage('Run Selenium Test') {
             steps {
-                bat 'python selenium_tests\\test_login.py'
+                bat '"C:/Users/bhumi/AppData/Local/Programs/Python/Python313/python.exe" selenium_tests\\test_login.py'
             }
         }
     }
